@@ -1,11 +1,11 @@
 /*exercise 1*/
 select distinct L.Surname
 from LECTURER as L
-  join STUDENT as S on L.Surname = S.Surname
-  /*exercise 2*/
-select
+  join STUDENT as S on L.Surname = S.Surname;
+/*exercise 2*/
+select distinct L.Surname
 from LECTURER as L,
-  EDITION as C,
+  "EDITION" as C,
   EXAM as E
 where L.Id = C.Lecturer
   and C.Course = E.Course
@@ -14,4 +14,4 @@ group by L.Id,
   L.Surname,
   L.Course,
   L.Year
-having count(*) > 10
+having count(*) > 10;
